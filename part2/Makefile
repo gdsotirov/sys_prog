@@ -34,7 +34,7 @@ pr2-06: pr2-06.c
 	$(CC) $(CC_FLAGS) -o $@ $<
 
 pr2-07: pr2-07.c
-	$(CC) $(CC_FLAGS) -o $@ $<
+	$(CC) $(CC_FLAGS) -D_XOPEN_SOURCE=500 -o $@ $<
 
 clean:
 	$(RM) $(RM_FLAGS) $(BINS)

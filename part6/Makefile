@@ -28,7 +28,7 @@ pr6-04: pr6-04.c
 	$(CC) $(CC_FLAGS) -o $@ $<
 
 pr6-05: pr6-05.c
-	$(CC) $(CC_FLAGS) -o $@ $<
+	$(CC) $(CC_FLAGS) -D_XOPEN_SOURCE=500 -o $@ $<
 
 pr6-06: pr6-06.c
 	$(CC) $(CC_FLAGS) -o $@ $<
@@ -43,7 +43,7 @@ pr6-09: pr6-09.c
 	$(CC) $(CC_FLAGS) -o $@ $<
 
 pr6-10: pr6-10.c
-	$(CC) $(CC_FLAGS) -o $@ $<
+	$(CC) $(CC_FLAGS) -D_XOPEN_SOURCE=500 -o $@ $<
 
 pr6-11: pr6-11.c
 	$(CC) $(CC_FLAGS) -o $@ $<
