@@ -1,0 +1,8 @@
+2003-06-06 20:25 EEST
+
+pr6-07:
+    Error 'Resource temporarily unavailable' on semop system call!
+
+pr6-12:
+    The child did't receive message from the parent!?
+
