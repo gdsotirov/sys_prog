@@ -28,7 +28,7 @@ pr2-04: pr2-04.c
 	$(CC) $(CC_FLAGS) -o $@ $<
 
 pr2-05: pr2-05.c
-	$(CC) $(CC_FLAGS) -o $@ $<
+	$(CC) $(CC_FLAGS) -D_XOPEN_SOURCE=500 -o $@ $<
 
 pr2-06: pr2-06.c
 	$(CC) $(CC_FLAGS) -o $@ $<
