@@ -195,10 +195,13 @@ void thr_yield() {
 
     old_t_id = thread_id;   /* remember old id */
 
-    thread_id = (++thread_id) % NTHREADS;
+    thread_id++;
+    thread_id %= NTHREADS;
 
-    while ( thread[thread_id].state != READY )
-        thread_id = (++thread_id) % NTHREADS;
+    while ( thread[thread_id].state != READY ) {
+        thread_id++;
+        thread_id %= NTHREADS;
+    }
 
     if ( old_t_id == thread_id ) /* Only one thread running? */
         error(7);
