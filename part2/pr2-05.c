@@ -16,8 +16,8 @@ int main() {
     /* parent process */
     printf("This is the parent process. PID is: %d\n", getpid());
     printf("   Process PPID is         : %d\n", getppid());
-    printf("   Process PGID is         : %d\n", getpgid());
-    printf("   Process SID is          : %d\n", getsid());
+    printf("   Process PGID is         : %d\n", getpgid(0));
+    printf("   Process SID is          : %d\n", getsid(0));
     printf("   Process real UID is     : %d\n", getuid());
     printf("   Process real GID is     : %d\n", getgid());
     printf("   Process effective UID is: %d\n", geteuid());
@@ -28,8 +28,8 @@ int main() {
     if ( pid == 0 ) {
         printf("This is the child process. PID is: %d\n", getpid());
         printf("   Process PPID is         : %d\n", getppid());
-        printf("   Process PGID is         : %d\n", getpgid());
-        printf("   Process SID is          : %d\n", getsid());
+        printf("   Process PGID is         : %d\n", getpgid(0));
+        printf("   Process SID is          : %d\n", getsid(0));
         printf("   Process real UID is     : %d\n", getuid());
         printf("   Process real GID is     : %d\n", getgid());
         printf("   Process effective UID is: %d\n", geteuid());
