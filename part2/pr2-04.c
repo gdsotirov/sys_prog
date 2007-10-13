@@ -31,7 +31,7 @@ int sys_func(const char *string) {
     }
 
     if ( childpid == 0 ) {
-        execl("/bin", "bsh", "-c", string, 0);
+        execl("/bin", "bsh", "-c", string, (char *)0);
         perror("Error: Execl failed ");
         return errno;
     }

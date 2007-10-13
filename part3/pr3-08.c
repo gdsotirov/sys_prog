@@ -35,7 +35,7 @@ int main() {
                     close(pipe_fd[1]);
 
                     /* execute command "who" */
-                    execlp("who", "who", 0);
+                    execlp("who", "who", (char *)0);
                     perror("Error: Execlp failed ");
                     exit(4); /* error */
     }
@@ -50,7 +50,7 @@ int main() {
                     close(pipe_fd[0]);
                     close(pipe_fd[1]);
 
-                    execlp("wc", "wc", "-l", 0); /* execute command "wc -l" */
+                    execlp("wc", "wc", "-l", (char *)0); /* execute command "wc -l" */
                     perror("Error: Execlp failed ");
                     exit(6); /* error */
     }
