@@ -12,6 +12,20 @@
 #include <setjmp.h>
 #include <sys/time.h>
 
+/* Define JB_BP, JB_SP and JB_PC macros if not available as Glibc 2.5 removed
+ * these from setjmp.h */
+#ifndef JB_BP
+#define JB_BP 3
+#endif
+
+#ifndef JB_SP
+#define JB_SP 4
+#endif
+
+#ifndef JB_PC
+#define JB_PC 5
+#endif
+
 #define NTHREADS 20 /* set maximum threads */
 
 typedef sigjmp_buf context; /* define type 'context' */
