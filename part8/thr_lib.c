@@ -9,11 +9,11 @@ context start_context; /* start context */
 struct itimerval val1; /* Timer (SVR4 virtual timer) */
 struct sigaction act1; /* Signal handler (SIGVTALRM) */
 
-static unsigned int  thread_id; /* running thread id                */
-static unsigned int  next_id;   /* next thread id                   */
-static unsigned int  old_t_id;  /* old stream thread id             */
-static unsigned char sleepers;  /* count of sleeping threads        */
-static unsigned char start_fl;  /* start flag for multithreading    */
+unsigned int  thread_id; /* running thread id                */
+unsigned int  next_id;   /* next thread id                   */
+unsigned int  old_t_id;  /* old stream thread id             */
+unsigned char sleepers;  /* count of sleeping threads        */
+unsigned char start_fl;  /* start flag for multithreading    */
 
 static void check_timeout(int signal);  /* signal handler           */
 static int ready_threads(void);         /* ready threds count       */
