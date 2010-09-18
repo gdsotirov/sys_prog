@@ -5,6 +5,12 @@
 
 #include "thr_def.h"
 
+#if __WORDSIZE == 64
+#define JMPBUF_TYPE long
+#else
+#define JMPBUF_TYPE int
+#endif
+
 context start_context; /* start context */
 struct itimerval val1; /* Timer (SVR4 virtual timer) */
 struct sigaction act1; /* Signal handler (SIGVTALRM) */
@@ -129,8 +135,8 @@ int thr_create(void (*func)(void), size_t stack_size, thread_t *id) {
 
     /* Set new thread context */
     sigsetjmp(thread[next_id].thread_context, 1);
-    thread[next_id].thread_context->__jmpbuf[JB_SP] = (int)(thread[next_id].thread_stack + stack_size);
-    thread[next_id].thread_context->__jmpbuf[JB_PC] = (int)func;
+    thread[next_id].thread_context->__jmpbuf[JB_SP] = (JMPBUF_TYPE)(thread[next_id].thread_stack + stack_size);
+    thread[next_id].thread_context->__jmpbuf[JB_PC] = (JMPBUF_TYPE)func;
     thread[next_id].thread_context->__jmpbuf[JB_BP] = thread[next_id].thread_context->__jmpbuf[JB_SP];
     thread[next_id].state                           = READY;
 
