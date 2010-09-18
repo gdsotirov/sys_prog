@@ -19,7 +19,7 @@ int filetest(char *path, int *fd) {
 }
 
 int main(int argc, char **argv) {
-    int *fdesc; /* file descriptor */
+    int *fdesc = NULL; /* file descriptor */
 
     if ( argc < 2 ) {
         printf("usage: %s filename\n", argv[0]);
