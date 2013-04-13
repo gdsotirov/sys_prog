@@ -14,7 +14,7 @@ int call_numb = 0;
 
 void sig_handler(int sig_numb) {
     char ch;
-    int clr;
+    /*int clr;*/
 
     call_numb++;
 
@@ -26,7 +26,7 @@ void sig_handler(int sig_numb) {
         default  :  printf("%c\n", ch); break;
     }
 
-    clr = getchar();
+    /*clr =*/ getchar();
     sbrk(512);
 }
 
