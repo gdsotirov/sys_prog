@@ -53,7 +53,7 @@ int main() {
         printf(" Access mode for own,grp,oth : %d\n", shmbuf.shm_perm.mode);
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.__seq);
         printf("Sizes>\n");
-        printf(" Segment size in bytes       : %d\n", shmbuf.shm_segsz);
+        printf(" Segment size in bytes       : %zd\n", shmbuf.shm_segsz);
         /*printf(" Size of segment in pages    : %d\n", shmbuf.__shm_npages);*/
         printf("Processes>\n");
         printf(" Process make last oper (pid): %d\n", shmbuf.shm_lpid);
@@ -92,7 +92,7 @@ int main() {
         printf(" Access mode for own,grp,oth : %d\n", shmbuf.shm_perm.mode);
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.__seq);
         printf("Sizes>\n");
-        printf(" Segment size in bytes       : %d\n", shmbuf.shm_segsz);
+        printf(" Segment size in bytes       : %zd\n", shmbuf.shm_segsz);
         /*printf(" Size of segment in pages    : %d\n", shmbuf.__shm_npages);*/
         printf("Processes>\n");
         printf(" Process make last oper (pid): %d\n", shmbuf.shm_lpid);
