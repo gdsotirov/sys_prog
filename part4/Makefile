@@ -19,5 +19,5 @@ pr4-01: pr4-01.c
 	$(CC) $(CC_FLAGS) -o $@ $<
 
 clean:
-	$(RM) $(RM_FLAGS) $(BINS)
+	$(RM) $(RM_FLAGS) $(BINS) $(addsuffix .exe,$(BINS))
 

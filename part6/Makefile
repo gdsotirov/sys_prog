@@ -52,5 +52,5 @@ pr6-12: pr6-12.c
 	$(CC) $(CC_FLAGS) -o $@ $<
 
 clean:
-	$(RM) $(RM_FLAGS) $(BINS)
+	$(RM) $(RM_FLAGS) $(BINS) $(addsuffix .exe,$(BINS))
 

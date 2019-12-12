@@ -37,5 +37,5 @@ pr2-07: pr2-07.c
 	$(CC) $(CC_FLAGS) -D_XOPEN_SOURCE=500 -o $@ $<
 
 clean:
-	$(RM) $(RM_FLAGS) $(BINS)
+	$(RM) $(RM_FLAGS) $(BINS) $(addsuffix .exe,$(BINS))
 

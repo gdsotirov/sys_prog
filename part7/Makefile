@@ -22,5 +22,5 @@ pr7-02: pr7-02.c
 	$(CC) $(CC_FLAGS) -o $@ $<
 
 clean:
-	$(RM) $(RM_FLAGS) $(BINS)
+	$(RM) $(RM_FLAGS) $(BINS) $(addsuffix .exe,$(BINS))
 
