@@ -33,7 +33,7 @@ void on_term(int sig) {
 }
 
 int main() {
-    key_t key; /* semaphor array key */
+    key_t key; /* semaphore array key */
     char buffer[80]; /* data buffer */
     key = ftok("..", 2); /* generate key */
     struct sembuf p_sbuf = {1, -1, SEM_UNDO}; /* buffer for p-operation */
@@ -51,17 +51,21 @@ int main() {
         exit(2);
     }
 
-    printf("Semaphors in the array = %lu\n", arg.buf->sem_nsems);
-    printf("Semaphor creator is user with id %d\n", arg.buf->sem_perm.cuid);
+#ifdef __CYGWIN__
+    printf("Semaphores in the array = %d\n", arg.buf->sem_nsems);
+#else
+    printf("Semaphores in the array = %lu\n", arg.buf->sem_nsems);
+#endif
+    printf("Semaphore creator is user with id %d\n", arg.buf->sem_perm.cuid);
 
     /* initialize operation buffer */
-    arg.val = 0; /* semaphor with index 0 (full) */
+    arg.val = 0; /* semaphore with index 0 (full) */
     if ( semctl(semdes, 0, SETVAL, arg) == -1 ) {
         perror("Error: Semctl failed ");
         exit(3);
     }
 
-    arg.val = 1; /* semaphor with index 1 (empty) */
+    arg.val = 1; /* semaphore with index 1 (empty) */
     if ( semctl(semdes, 1, SETVAL, arg) == -1 ) {
         perror("Error: Semctl failed ");
         exit(4);

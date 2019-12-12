@@ -51,10 +51,19 @@ int main(int argc, char *argv[]) {
     printf(" Key                         : %d\n", mbuf.msg_perm.key);
 #endif
     printf("Counters>\n");
-    printf(" Total byte count            : %zu\n", mbuf.msg_cbytes);
-    printf(" Total message count         : %zu\n", mbuf.msg_qnum);
+#ifdef __CYGWIN__
+    printf(" Total byte count            : %ui\n", mbuf.msg_cbytes);
+    printf(" Total message count         : %ui\n", mbuf.msg_qnum);
+#else
+    printf(" Total byte count            : %lu\n", mbuf.msg_cbytes);
+    printf(" Total message count         : %lu\n", mbuf.msg_qnum);
+#endif
     printf("Limits>\n");
-    printf(" Max byte count in msgs      : %zu\n", mbuf.msg_qbytes);
+#ifdef __CYGWIN__
+    printf(" Max byte count in msgs      : %ui\n", mbuf.msg_qbytes);
+#else
+    printf(" Max byte count in msgs      : %lu\n", mbuf.msg_qbytes);
+#endif
     printf("Process info>\n");
     printf(" Proc last send message (id) : %d\n" ,mbuf.msg_lspid);
     printf(" Proc last read message (id) : %d\n", mbuf.msg_lrpid);

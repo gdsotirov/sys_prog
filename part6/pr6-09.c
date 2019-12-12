@@ -57,12 +57,20 @@ int main() {
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.__seq);
 #endif
         printf("Sizes>\n");
-        printf(" Segment size in bytes       : %zd\n", shmbuf.shm_segsz);
+#ifdef __CYGWIN__
+        printf(" Segment size in bytes       : %ui\n", shmbuf.shm_segsz);
+#else
+        printf(" Segment size in bytes       : %lu\n", shmbuf.shm_segsz);
+#endif
         /*printf(" Size of segment in pages    : %d\n", shmbuf.__shm_npages);*/
         printf("Processes>\n");
         printf(" Process make last oper (pid): %d\n", shmbuf.shm_lpid);
         printf(" Process created sh mem (pid): %d\n", shmbuf.shm_cpid);
+#ifdef __CYGWIN__
+        printf(" Attached to segm proc count : %u\n", shmbuf.shm_nattch);
+#else
         printf(" Attached to segm proc count : %lu\n", shmbuf.shm_nattch);
+#endif
 #if defined(__sun__) || defined(__solaris__)
         printf(" Used by shm_info (cattch)   : %lu\n", shmbuf.shm_cnattch);
 #endif
@@ -100,12 +108,20 @@ int main() {
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.__seq);
 #endif
         printf("Sizes>\n");
-        printf(" Segment size in bytes       : %zd\n", shmbuf.shm_segsz);
+#ifdef __CYGWIN__
+        printf(" Segment size in bytes       : %ui\n", shmbuf.shm_segsz);
+#else
+        printf(" Segment size in bytes       : %lu\n", shmbuf.shm_segsz);
+#endif
         /*printf(" Size of segment in pages    : %d\n", shmbuf.__shm_npages);*/
         printf("Processes>\n");
         printf(" Process make last oper (pid): %d\n", shmbuf.shm_lpid);
         printf(" Process created sh mem (pid): %d\n", shmbuf.shm_cpid);
+#ifdef __CYGWIN__
+        printf(" Attached to segm proc count : %u\n", shmbuf.shm_nattch);
+#else
         printf(" Attached to segm proc count : %lu\n", shmbuf.shm_nattch);
+#endif
 #if defined(__sun__) || defined(__solaris__)
         printf(" Used by shm_info (cattch)   : %lu\n", shmbuf.shm_cnattch);
 #endif
