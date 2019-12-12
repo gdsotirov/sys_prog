@@ -11,7 +11,8 @@ were translated in C, because I did not see the need for using C++.
 
 ## Requirements
 
-A recent C compiler (e.g. [GCC](https://gcc.gnu.org/)) and `make` (e.g.
-[GNU Make](https://www.gnu.org/software/make/)) are necessary to build the
+A recent C compiler (e.g. [GCC](https://gcc.gnu.org/)), `make` (e.g.
+[GNU Make](https://www.gnu.org/software/make/)) and C library (e.g.
+[GNU C](https://www.gnu.org/software/libc/)) are necessary to build the
 examples.
 
