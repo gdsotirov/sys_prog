@@ -35,13 +35,17 @@ int main(int argc, char *argv[]) {
     /* printout message queue information */
     printf("Queue %d\n", qdes);
     printf("-----------\n");
-    printf("Permitions>\n");
+    printf("Permissions>\n");
     printf(" Effective uid of owner      : %d\n", mbuf.msg_perm.uid);
     printf(" Effective gid of owner      : %d\n", mbuf.msg_perm.gid);
     printf(" Effective uid of creator    : %d\n", mbuf.msg_perm.cuid);
     printf(" Effective gid of creator    : %d\n", mbuf.msg_perm.cgid);
     printf(" Access mode for own,grp,oth : %d\n", mbuf.msg_perm.mode);
+#ifdef _CYGWIN_IPC_H
+    printf(" Sequence counter            : %d\n", mbuf.msg_perm.seq);
+#else
     printf(" Sequence counter            : %d\n", mbuf.msg_perm.__seq);
+#endif
     /* key is defined for Sun Solaris only */
 #if defined(__sun__) || defined (__solaris__)
     printf(" Key                         : %d\n", mbuf.msg_perm.key);

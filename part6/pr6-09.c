@@ -42,7 +42,7 @@ int main() {
         perror("Error: Shmctl failed ");
         exit(3);
     }
-    else {/* printout informatin about the shared memory segment */
+    else {/* printout information about the shared memory segment */
         printf("\nShare memory %d\n", shmdes);
         printf("------------------\n");
         printf("Permissions>\n");
@@ -51,7 +51,11 @@ int main() {
         printf(" Effective uid of creator    : %d\n", shmbuf.shm_perm.cuid);
         printf(" Effective gid of creator    : %d\n", shmbuf.shm_perm.cgid);
         printf(" Access mode for own,grp,oth : %d\n", shmbuf.shm_perm.mode);
+#ifdef _CYGWIN_IPC_H
+        printf(" Sequence counter            : %d\n", shmbuf.shm_perm.seq);
+#else
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.__seq);
+#endif
         printf("Sizes>\n");
         printf(" Segment size in bytes       : %zd\n", shmbuf.shm_segsz);
         /*printf(" Size of segment in pages    : %d\n", shmbuf.__shm_npages);*/
@@ -81,7 +85,7 @@ int main() {
         perror("Error: Shmctl failed ");
         exit(5);
     }
-    else { /* printout informatin about the shared memory segment */
+    else { /* printout information about the shared memory segment */
         printf("\nShare memory %d\n", shmdes);
         printf("------------------\n");
         printf("Permissions>\n");
@@ -90,7 +94,11 @@ int main() {
         printf(" Effective uid of creator    : %d\n", shmbuf.shm_perm.cuid);
         printf(" Effective gid of creator    : %d\n", shmbuf.shm_perm.cgid);
         printf(" Access mode for own,grp,oth : %d\n", shmbuf.shm_perm.mode);
+#ifdef _CYGWIN_IPC_H
+        printf(" Sequence counter            : %d\n", shmbuf.shm_perm.seq);
+#else
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.__seq);
+#endif
         printf("Sizes>\n");
         printf(" Segment size in bytes       : %zd\n", shmbuf.shm_segsz);
         /*printf(" Size of segment in pages    : %d\n", shmbuf.__shm_npages);*/
