@@ -97,6 +97,7 @@ int main() {
                             exit(7);
                         }
                     }
+                    break;
         default :   /* parent process */
                     fdes = open(FNAME, O_CREAT | O_TRUNC | O_RDWR, 0666);
 
