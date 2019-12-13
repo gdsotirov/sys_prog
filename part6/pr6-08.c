@@ -93,7 +93,7 @@ int main() {
                         if ( read(fdes, buffer, sizeof(buffer)) == -1 )
                             perror("Error: Read failed ");
 
-                        printf("Consumer reads: %s\n", buffer);
+                        printf("Consumer (%d) reads: %s\n", getpid(), buffer);
 
                         /* v-operation on sem 1 */
                         if ( semop(semdes, &v_sbuf, 1) == -1 ) {
@@ -112,7 +112,7 @@ int main() {
                             exit(8);
                         }
 
-                        printf("\nProducer. Insert string: ");
+                        printf("\nProducer (%d). Insert string: ", getpid());
 
                         if ( scanf("%s", buffer) == EOF ) {
                             kill(pid, SIGTERM);
