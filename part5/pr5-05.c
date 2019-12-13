@@ -8,11 +8,11 @@
 #include <signal.h>
 #include <setjmp.h>
 
-sigjmp_buf context;
+sigjmp_buf ctx;
 
 void on_sigint(int sig) { /* SIGINT Handler */
     printf("Enter on_sigint. Now call siglongjmp\n");
-    siglongjmp(context, 1); /* jumping with val = 1 */
+    siglongjmp(ctx, 1); /* jumping with val = 1 */
 }
 
 int main() {
@@ -38,7 +38,7 @@ int main() {
         return 2;
     }
 
-    if ( (retcode = sigsetjmp(context, 1)) != 0 ) {
+    if ( (retcode = sigsetjmp(ctx, 1)) != 0 ) {
         printf("Context is set via sigsetjmp, retcode = %d.\n", retcode);
         return 0;
     }
