@@ -183,7 +183,7 @@ void thr_yield() {
     if (thread[thread_id].state == RUNNING )
         thread[thread_id].state = READY;
 
-    check_sleepers(); /* how many are speeping threads */
+    check_sleepers(); /* how many are sleeping threads */
 
     /* wait for ready thread */
     while ( ready_threads() == 0 && sleepers > 0 )

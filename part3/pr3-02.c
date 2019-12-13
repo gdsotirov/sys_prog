@@ -1,6 +1,6 @@
-/* Example   : pr3-2
- * Descripton: Process writer.
- * Edited by : George D. Sotirov, astronom@dir.bg
+/* Example    : pr3-2
+ * Description: Process writer.
+ * Edited by  : George D. Sotirov, astronom@dir.bg
  */
 
 #include <stdio.h>

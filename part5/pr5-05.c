@@ -30,7 +30,7 @@ int main() {
 
     sigemptyset(&act.sa_mask); /* initialize act.sa_mask */
     sigaddset(&act.sa_mask, SIGSEGV); /* add signal SIGSEGV in mask */
-    act.sa_handler = on_sigint; /* setting hanler */
+    act.sa_handler = on_sigint; /* setting handler */
     act.sa_flags = 0; /* setting flags */
 
     if ( sigaction(SIGINT, &act, 0) == -1 ) { /* catch signal SIGINT */

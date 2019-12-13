@@ -11,7 +11,7 @@ int main() {
     int dup_fd;
     char ch;
 
-    if ( (dup_fd = dup(STDIN_FILENO)) == -1 ) { /* diplicate descriptor */
+    if ( (dup_fd = dup(STDIN_FILENO)) == -1 ) { /* duplicate descriptor */
         perror("Error: Dup failed ");
         _exit(1);
     }

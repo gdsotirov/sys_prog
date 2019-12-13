@@ -13,7 +13,7 @@ int main(void) {
     int status;
 
     switch ( childpid = fork() ) {
-        case -1 :   perror("Error: Fork failed "); /* unsucessfull */
+        case -1 :   perror("Error: Fork failed "); /* unsuccessful */
                     break;
         case  0 :   /* This is a child process that does nothing */
                     printf("Child process.\n");

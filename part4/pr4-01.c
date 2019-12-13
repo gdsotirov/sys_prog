@@ -17,7 +17,7 @@ int main() {
     int fd1;
     int fd2;
     int ofs;
-    int diff = 0; /* shows if there a difference betwin files */
+    int diff = 0; /* shows if there a difference between files */
 
     fd1 = open("/dev/dsk3", O_RDONLY); /* open special block device file */
     fd2 = open("/dev/rdsk3", O_RDONLY); /* open special char device file */
@@ -28,7 +28,7 @@ int main() {
     read(fd1, buf1, sizeof(buf1)); /* read file 1 */
     read(fd2, buf2, sizeof(buf2)); /* read file 2 */
 
-    for ( ofs = 0; ofs < sizeof(buf1); ofs++ ) { /* compeare the two files */
+    for ( ofs = 0; ofs < sizeof(buf1); ofs++ ) { /* compare the two files */
         if ( buf1[ofs] != buf2[ofs] ) {
             printf("There is a difference at offset %d.\n", ofs);
             diff = 1;

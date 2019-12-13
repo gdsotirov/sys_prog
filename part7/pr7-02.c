@@ -14,7 +14,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#define PORT 2121 /* comunication port */
+#define PORT 2121 /* communication port */
 
 void fatal(char *err, int how);
 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
     if ( (sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1 )
         fatal("Socket failed ", 0);
 
-    /* get the addres of the remote computer */
+    /* get the address of the remote computer */
     if ( (hp = gethostbyname(argv[1])) == 0 )
         fatal("Gethostbyname failed ", 0);
 

@@ -10,9 +10,9 @@
 #include <sys/wait.h>
 
 int main() {
-    int pipe_fd[2];     /* pipe file descriptors        */
-    int status[2];      /* status of finished proceses  */
-    pid_t pid1;         /* process identificators       */
+    int pipe_fd[2];     /* pipe file descriptors      */
+    int status[2];      /* status of finished process */
+    pid_t pid1;         /* process identificators     */
     pid_t pid2;
 
     if ( pipe(pipe_fd) == -1 ) { /* create pipe */

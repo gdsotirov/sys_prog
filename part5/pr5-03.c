@@ -1,5 +1,5 @@
 /* Example    : pr5-3
- * Description: Siganl options example.
+ * Description: Signal options example.
  * Edited by  : George D. Sotirov, astronom@dir.bg
  */
 
@@ -10,7 +10,7 @@
 int main() {
     sigset_t sigmask;
 
-    sigemptyset(&sigmask); /* initailization */
+    sigemptyset(&sigmask); /* initialization */
 
     if ( sigprocmask(0, 0, &sigmask) == -1 ) { /* read mask */
         perror("Error: Sigprocmask failed ");

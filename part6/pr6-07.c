@@ -21,12 +21,12 @@ int main() {
                                  {2, -1, IPC_NOWAIT}};
     key_t key = ftok("/tmp", 's');
 
-    /* open array of semaphors */
+    /* open array of semaphores */
     if ( (semdes = semget(key, NSEMS, IPC_CREAT | IPC_EXCL | 0666)) == -1 ) {
         perror("Error: Semget failed ");
         exit(1);
     }
-    printf("Semaphors geted.\n");
+    printf("Semaphores got.\n");
 
     if ( semop(semdes, sbuf, 3) == -1 ) {
         perror("Error: Semop failed ");

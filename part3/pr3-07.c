@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 
         write(pipe_fd2[1], "A child message #2.\0", BUF_SZ);
 
-        /* used file descrptors are closed when all processes close it
+        /* used file descriptors are closed when all processes close it
          * file descriptors */
         close(pipe_fd1[0]);
         close(pipe_fd2[1]);

@@ -72,7 +72,7 @@ int main() {
     if ( bind(sockfd, (struct sockaddr *)&addr, sizeof(addr)) == -1 )
         p_error("Bind failed", errno, 1);
 
-    /* prepare the socket for incomming queryes */
+    /* prepare the socket for incoming queries */
     if ( listen(sockfd, 5) == -1 )
         p_error("Listen failed", errno, 1);
 
@@ -95,7 +95,7 @@ int main() {
                             char addrcl[4], filename[256], buf[BUFSIZ];
                             int cnt, fd;
 
-                            close(sockfd); /* close the old socket desriptor */
+                            close(sockfd); /* close the old socket descriptor */
 
                             /* retrieve client IP address */
                             *addrcl = ntohl(addr_cl.sin_addr.s_addr);

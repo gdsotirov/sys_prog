@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
             count++;
     }
 
-    /* id dir is empty - then rmove it */
+    /* id dir is empty - then remove it */
     if ( count == 0 ) {
         rmdir(argv[1]);
         printf("Directory '%s' removed.\n", argv[1]);

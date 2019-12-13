@@ -46,7 +46,7 @@ int main() {
     }
 
     arg.buf = &my_semds;
-    if ( semctl(semdes, 0, IPC_STAT, arg) == -1 ) { /* semaphor array status */
+    if ( semctl(semdes, 0, IPC_STAT, arg) == -1 ) { /* semaphore array status */
         perror("Error: Semctl failed ");
         exit(2);
     }

@@ -139,7 +139,7 @@ void on_sig(int sig) {
     if ( shmdt(shmaddr) == -1 ) /* detach shared memory */
         perror("Error: Shmdt failed ");
 
-    /* destroy semaphors array and shared memory */
+    /* destroy semaphores array and shared memory */
     if ( shmctl(shmdes, IPC_RMID, 0) == -1 )
         perror("Error: Shmctl failed ");
 

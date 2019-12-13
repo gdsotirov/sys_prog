@@ -43,7 +43,7 @@ int main() {
         exit(2);
     }
     else for ( ;; ) {
-        pause(); /* waiting for singnal from timer */
+        pause(); /* waiting for signal from timer */
     }
 
     return 0;

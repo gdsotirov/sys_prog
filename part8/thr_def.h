@@ -54,10 +54,10 @@ int thr_delete(thread_t id);    /* destroy thread                   */
 void thr_mexit();               /* exit multithreading mode         */
 void thr_yield(void);           /* invoke dispatcher                */
 void thr_delay(unsigned long ticks);    /* delay thread             */
-void sema_pb(sema_t *sem);      /* Ð operation on binary semaphore  */
+void sema_pb(sema_t *sem);      /* operation on binary semaphore    */
 void sema_vb(sema_t *sem);      /* V operation on binary semaphore  */
-void sema_pc(sema_t *sem);      /* Ð operation on common semaphore  */
-void sema_vc(sema_t *sem);      /* V operatoin on common semaphore  */
+void sema_pc(sema_t *sem);      /* operation on common semaphore    */
+void sema_vc(sema_t *sem);      /* V operation on common semaphore  */
 void parbegin(void);            /* begin multithreading mode        */
 void parend(void);              /* end multithreading mode          */
 

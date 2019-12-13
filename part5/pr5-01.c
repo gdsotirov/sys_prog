@@ -10,7 +10,7 @@
 
 FILE *fildes, *fopen();
 
-void on_intr(int catch_sig) { /* signal hadnler */
+void on_intr(int catch_sig) { /* signal handler */
     char go_on;
 
     printf("Interrupt (signal %d is caught. Go on? [y] ", catch_sig);
