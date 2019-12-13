@@ -32,6 +32,7 @@ int main(int argc, char **argv) {
                     fd = open("MYFIFO", O_RDONLY);
                     while ( (len = read(fd, readbuf, sizeof(readbuf))) > 0 )
                         printf("%s", readbuf); /* print data to screen */
+                    break;
         default :   /* parent opens pipe for writing */
                     fd = open("MYFIFO", O_WRONLY);
                     fd1 = open(argv[1], O_RDONLY); /* parent opens file */

@@ -39,6 +39,7 @@ int main() {
 
     switch ( fork() ) { /* start new session */
         case -1 :   p_error("Fork failed", errno, 0);
+                    break;
         default :   exit(0); /* close first parent */
         case  0 :   { /* first child, start new session */
                         if ( setsid() == -1 ) /* become new session leader */

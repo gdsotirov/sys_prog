@@ -103,6 +103,7 @@ int main() {
                         if ( semop(semdes, &v_sbuf, 1) == -1 )
                             perror("Error: Semop failed ");
                     }
+                    break;
         default :   /* parent process */
                     for ( i = 1; i < 20; i++ )
                         signal(i, on_sig); /* catch main signals */
