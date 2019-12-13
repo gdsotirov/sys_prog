@@ -114,7 +114,7 @@ int main() {
 
                         printf("\nProducer (%d). Insert string: ", getpid());
 
-                        if ( scanf("%s", buffer) == EOF ) {
+                        if ( scanf("%79s", buffer) == EOF ) {
                             kill(pid, SIGTERM);
                             waitpid(pid, &status, 0);
                             break;
