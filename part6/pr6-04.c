@@ -46,9 +46,12 @@ int main(int argc, char *argv[]) {
 #else
     printf(" Sequence counter            : %d\n", mbuf.msg_perm.__seq);
 #endif
-    /* key is defined for Sun Solaris only */
 #if defined(__sun__) || defined (__solaris__)
     printf(" Key                         : %d\n", mbuf.msg_perm.key);
+#elif defined _CYGWIN_IPC_H
+    printf(" Key                         : %lld\n", mbuf.msg_perm.key);
+#else
+    printf(" Key                         : %d\n", mbuf.msg_perm.__key);
 #endif
     printf("Counters>\n");
 #ifdef __CYGWIN__
