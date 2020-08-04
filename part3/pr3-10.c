@@ -6,7 +6,26 @@
 #include <stdio.h>
 #include <string.h>
 #include <sys/stat.h>
+    /* Linux, Android, and other systems using GNU C library */
+#if defined(__linux__) || defined(__GLIBC__) || \
+    /* FreeBSD, OpenBSD, NetBSD, and DragonFlyBSD */ \
+    defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || \
+    /* Mac OS X */ \
+    defined(__APPLE__) && defined(__MACH__) || \
+    /* AIX, OSF/1, Tru64 Unix */ \
+    defined(_AIX) || defined (__osf__)
+#include <sys/types.h>
+#elif defined(hpux)
+/* HP-UX */
 #include <sys/sysmacros.h>
+#elif defined(sun)
+/* Solaris */
+#include <sys/types.h>
+#include <sys/mkdev.h>
+#else
+/* Unknown OS. Try the BSD approach. */
+#include <sys/types.h>
+#endif
 
 struct stat buf;
 
