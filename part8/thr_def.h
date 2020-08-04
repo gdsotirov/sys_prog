@@ -8,6 +8,10 @@
 #include <unistd.h>
 #include <string.h>
 #include <signal.h>
+/* On Apple including ucontext.h results in error unless _XOPEN_SOURCE is defined */
+#ifdef __APPLE__
+#define _XOPEN_SOURCE
+#endif
 #include <ucontext.h>
 #include <setjmp.h>
 #include <sys/time.h>
