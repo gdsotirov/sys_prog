@@ -53,6 +53,8 @@ int main() {
         printf(" Access mode for own,grp,oth : %d\n", shmbuf.shm_perm.mode);
 #ifdef _CYGWIN_IPC_H
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.seq);
+#elif defined(__DARWIN_UNIX03) /* Apple */
+        printf(" Sequence counter            : %hu\n", shmbuf.shm_perm._seq);
 #else
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.__seq);
 #endif
@@ -104,6 +106,8 @@ int main() {
         printf(" Access mode for own,grp,oth : %d\n", shmbuf.shm_perm.mode);
 #ifdef _CYGWIN_IPC_H
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.seq);
+#elif defined(__DARWIN_UNIX03) /* Apple */
+        printf(" Key                         : %d\n", shmbuf.shm_perm._key);
 #else
         printf(" Sequence counter            : %d\n", shmbuf.shm_perm.__seq);
 #endif

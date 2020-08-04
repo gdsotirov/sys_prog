@@ -43,6 +43,8 @@ int main(int argc, char *argv[]) {
     printf(" Access mode for own,grp,oth : %d\n", mbuf.msg_perm.mode);
 #ifdef _CYGWIN_IPC_H
     printf(" Sequence counter            : %d\n", mbuf.msg_perm.seq);
+#elif defined(__DARWIN_UNIX03) /* Apple */
+    printf(" Sequence counter            : %d\n", mbuf.msg_perm._seq);
 #else
     printf(" Sequence counter            : %d\n", mbuf.msg_perm.__seq);
 #endif
@@ -50,6 +52,8 @@ int main(int argc, char *argv[]) {
     printf(" Key                         : %d\n", mbuf.msg_perm.key);
 #elif defined _CYGWIN_IPC_H
     printf(" Key                         : %lld\n", mbuf.msg_perm.key);
+#elif defined(__DARWIN_UNIX03) /* Apple */
+    printf(" Key                         : %d\n", mbuf.msg_perm._key);
 #else
     printf(" Key                         : %d\n", mbuf.msg_perm.__key);
 #endif
