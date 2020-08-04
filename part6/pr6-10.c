@@ -34,7 +34,7 @@ int main() {
     struct sembuf p_sbuf = {1, -1, SEM_UNDO}; /* P operation buffer */
     struct sembuf v_sbuf = {0, 1, SEM_UNDO}; /* V operation buffer */
     struct shmid_ds my_shmds; /* used in shmctl */
-    union semun arg; /* argument in semctl */
+    union semun_u arg; /* argument in semctl */
     int i;
 
     /* Create/open semaphores array */

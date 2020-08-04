@@ -5,9 +5,9 @@
 
 #include <sys/sem.h>
 
-union semun {
-    int val;                    /* semaphore value                      */
+union semun_u {
+    int             val;        /* semaphore value                      */
     struct semid_ds *buf;       /* control data for semaphor array      */
-    unsigned short *array;      /* values of all sempahors in array     */
+    unsigned short  *array;     /* values of all sempahors in array     */
 };
 
