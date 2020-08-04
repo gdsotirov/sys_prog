@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <signal.h>
-#include <termio.h>
+#include <termios.h>
 #include <sys/wait.h>
 
 void on_sigchld(int sig) { /* SIGCHLD Handler */
