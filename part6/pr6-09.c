@@ -68,10 +68,11 @@ int main() {
         printf("Processes>\n");
         printf(" Process make last oper (pid): %d\n", shmbuf.shm_lpid);
         printf(" Process created sh mem (pid): %d\n", shmbuf.shm_cpid);
-#ifdef __CYGWIN__
-        printf(" Attached to segm proc count : %u\n", shmbuf.shm_nattch);
-#else
+
+#ifdef __linux__
         printf(" Attached to segm proc count : %lu\n", shmbuf.shm_nattch);
+#else
+        printf(" Attached to segm proc count : %u\n", shmbuf.shm_nattch);
 #endif
 #if defined(__sun__) || defined(__solaris__)
         printf(" Used by shm_info (cattch)   : %lu\n", shmbuf.shm_cnattch);
@@ -121,10 +122,11 @@ int main() {
         printf("Processes>\n");
         printf(" Process make last oper (pid): %d\n", shmbuf.shm_lpid);
         printf(" Process created sh mem (pid): %d\n", shmbuf.shm_cpid);
-#ifdef __CYGWIN__
-        printf(" Attached to segm proc count : %u\n", shmbuf.shm_nattch);
-#else
+
+#ifdef __linux__
         printf(" Attached to segm proc count : %lu\n", shmbuf.shm_nattch);
+#else
+        printf(" Attached to segm proc count : %u\n", shmbuf.shm_nattch);
 #endif
 #if defined(__sun__) || defined(__solaris__)
         printf(" Used by shm_info (cattch)   : %lu\n", shmbuf.shm_cnattch);

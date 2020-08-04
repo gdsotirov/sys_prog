@@ -29,7 +29,7 @@ int main() {
     struct sockaddr_in addr;
     struct sockaddr_in addr_cl;
     socklen_t addrlen;
-    struct hostent *hp;
+    struct hostent *hp = NULL;
     int flags; /* socket flags */
     char localhost[NAMELEN + 1]; /* local host name */
 

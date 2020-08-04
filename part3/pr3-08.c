@@ -62,6 +62,6 @@ int main() {
     if ( (waitpid(pid1, &status[0], 0) != pid1) || (waitpid(pid2, &status[1], 0) != pid2) )
         perror("Error: Waitpid failed!\n");
 
-    return (status[1] + status[2]);
+    return (status[0] + status[1]);
 }
 

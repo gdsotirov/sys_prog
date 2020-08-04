@@ -51,10 +51,10 @@ int main() {
         exit(2);
     }
 
-#ifdef __CYGWIN__
-    printf("Semaphores in the array = %d\n", arg.buf->sem_nsems);
-#else
+#ifdef __linux__
     printf("Semaphores in the array = %lu\n", arg.buf->sem_nsems);
+#else
+    printf("Semaphores in the array = %d\n", arg.buf->sem_nsems);
 #endif
     printf("Semaphore creator is user with id %d\n", arg.buf->sem_perm.cuid);
 
