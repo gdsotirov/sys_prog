@@ -135,10 +135,18 @@ int thr_create(void (*func)(void), size_t stack_size, thread_t *id) {
 
     /* Set new thread context */
     sigsetjmp(thread[next_id].thread_context, 1);
-#ifndef __CYGWIN__
+#ifdef __linux__
     thread[next_id].thread_context->__jmpbuf[JB_SP] = (JMPBUF_TYPE)(thread[next_id].thread_stack + stack_size);
     thread[next_id].thread_context->__jmpbuf[JB_PC] = (JMPBUF_TYPE)func;
     thread[next_id].thread_context->__jmpbuf[JB_BP] = thread[next_id].thread_context->__jmpbuf[JB_SP];
+#elif defined(__APPLE__)
+    thread[next_id].thread_context[JB_SP] = (JMPBUF_TYPE)(thread[next_id].thread_stack + stack_size);
+    thread[next_id].thread_context[JB_PC] = (JMPBUF_TYPE)func;
+    thread[next_id].thread_context[JB_BP] = thread[next_id].thread_context[JB_SP];
+#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+    thread[next_id].thread_context->_sjb[JB_SP] = (JMPBUF_TYPE)(thread[next_id].thread_stack + stack_size);
+    thread[next_id].thread_context->_sjb[JB_PC] = (JMPBUF_TYPE)func;
+    thread[next_id].thread_context->_sjb[JB_BP] = thread[next_id].thread_context->__jmpbuf[JB_SP];
 #endif
     thread[next_id].state                           = READY;
 
