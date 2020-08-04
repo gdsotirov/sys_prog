@@ -20,7 +20,7 @@
 
 #define FNAME "temp"
 
-union semun arg;
+union semun_u arg;
 int semdes;
 int fdes;
 int status;
