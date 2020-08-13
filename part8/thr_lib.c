@@ -11,6 +11,8 @@
 #define JMPBUF_TYPE int
 #endif
 
+thread_tab_t thread[NTHREADS];
+
 context start_context; /* start context */
 struct itimerval val1; /* Timer (SVR4 virtual timer) */
 struct sigaction act1; /* Signal handler (SIGVTALRM) */

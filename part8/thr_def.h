@@ -38,13 +38,13 @@ typedef unsigned int thread_t; /* define 'straem' type */
 
 enum thread_state {RUNNING, READY, BLOCKED, DELAYED, TERMINATED};
 
-struct thread_TCB {             /* TCB - descriptor */
+typedef struct thread_TCB {             /* TCB - descriptor */
     context         thread_context;     /* thread context           */
     char            *thread_stack;      /* stack pointer            */
     enum            thread_state state; /* thread state             */
     unsigned int    *ptr_to_sem;        /* pointer to semaphore     */
     unsigned long   delay_time;         /* delay time, ms           */
-} thread[NTHREADS]; /* Threads table */
+} thread_tab_t; /* Threads table */
 
 extern unsigned int  thread_id; /* running thread id                */
 extern unsigned int  next_id;   /* next thread id                   */
