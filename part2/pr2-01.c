@@ -1,6 +1,6 @@
 /* Example    : pr2-1
  * Description: Demonstrates fork system call.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

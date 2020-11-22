@@ -1,5 +1,5 @@
 #
-# Written by George D. Sotirov, astronom@dir.bg
+# Written by Georgi D. Sotirov, gdsotirov@gmail.com
 #
 
 CC = gcc

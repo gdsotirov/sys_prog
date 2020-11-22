@@ -1,6 +1,6 @@
 /* Example    : pr3-9
  * Description: Example for named pipes.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

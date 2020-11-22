@@ -1,6 +1,6 @@
 /* Example    : pr3-8
  * Description: Shell command pipes example.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

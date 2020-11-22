@@ -1,6 +1,6 @@
 /* Example    : pr3-6
  * Description: Example for a 'ln' command.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

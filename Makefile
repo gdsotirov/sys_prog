@@ -1,5 +1,5 @@
 #
-# Written by George D. Sotirov, astronom@dir.bg
+# Written by Georgi D. Sotirov, gdsotirov@gmail.com
 #
 
 SUBDIRS = part2 part3 part4 part5 part6 part7 part8

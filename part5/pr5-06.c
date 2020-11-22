@@ -1,6 +1,6 @@
 /* Example    : pr5-6
  * Description: Process interaction example.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

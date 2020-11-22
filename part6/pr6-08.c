@@ -1,6 +1,6 @@
 /* Example    : pr6-8
  * Description: Reader-writer example with semaphores.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

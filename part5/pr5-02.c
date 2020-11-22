@@ -1,6 +1,6 @@
 /* Example    : pr5-2
  * Description: Demonstrates ioctl system call and termios interface.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

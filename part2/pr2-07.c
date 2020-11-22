@@ -1,6 +1,6 @@
 /* Example    : pr2-7
  * Description: Demonstrates brk and sbrk system calls.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

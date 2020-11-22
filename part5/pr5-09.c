@@ -1,6 +1,6 @@
 /* Example    : pr5-9
  * Description: Interval timer example.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

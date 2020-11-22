@@ -1,6 +1,6 @@
 /* Example    : pr6-7
  * Description: Semaphores array example.
- * Edited by  : George D. Sotirov, astornom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

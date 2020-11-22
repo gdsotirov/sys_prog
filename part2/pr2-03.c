@@ -1,6 +1,6 @@
 /* Example    : pr2-3
  * Description: Demonstrates wait and waitpid system calls.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /* File       : msgbuf.h
  * Description: Constant msgbuf structure definitions.
- * Written by : George D. Sotirov, astornom@dir.bg
+ * Written by : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #define MSG_KEY         88

@@ -1,6 +1,6 @@
 /* Example    : pr6-3
  * Description: Messages IPC example (receive message).
- * Edited by  : George D. Sotirov, astornom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /* Example    : pr7-1
  * Description: Server via TCP/IP socket.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

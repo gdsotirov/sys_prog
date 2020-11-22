@@ -1,6 +1,6 @@
 /* Example    : pr5-8
  * Description: Demonstrates alarm system call.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

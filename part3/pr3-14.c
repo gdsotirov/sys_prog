@@ -1,6 +1,6 @@
 /* Example    : pr3-14
  * Description: Directory listing example.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

@@ -1,6 +1,6 @@
 /* Example    : pr5-4
  * Description: Demonstrates sigaction system call.
- * Edited by  : George D. Sotirov, astornom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>

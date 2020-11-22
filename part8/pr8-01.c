@@ -1,7 +1,7 @@
 /* Example    : pr8-1
  * Description: Multithreaded example.
  * Author     : 2000, Lylan Nikolov
- * Edited by  : 2003, George D. Sotirov, astronom@dir.bg
+ * Edited by  : 2003, Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include "thr_def.h"

@@ -1,6 +1,6 @@
 /* Example    : pr2-4
  * Description: Demonstrates execl system call.
- * Edited by  : George D. Sotirov, astronom@dir.bg
+ * Edited by  : Georgi D. Sotirov, gdsotirov@gmail.com
  */
 
 #include <stdio.h>
