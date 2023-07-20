@@ -25,7 +25,7 @@ int main() {
                     pause(); /* waiting signal */
                     exit(15);
         default :   /* parent process */
-                    sigset(SIGCHLD, on_sigchld);
+                    signal(SIGCHLD, on_sigchld);
                     sleep(1); /* work simulation */
                     printf("Kill the child? [y/n] ");
                     /* send signal to the child? */

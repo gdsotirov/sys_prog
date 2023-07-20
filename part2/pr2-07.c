@@ -31,7 +31,7 @@ void sig_handler(int sig_numb) {
 }
 
 int main(void) {
-    sigset(SIGSEGV, sig_handler);
+    signal(SIGSEGV, sig_handler);
     last_addr = (char *)sbrk(0);
     printf("Original break value: %p\n", last_addr);
     for ( ;; ) {

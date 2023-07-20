@@ -29,7 +29,7 @@ int main() {
     struct msgbuf message;
     struct msgstruct *msg = (struct msgstruct *)message.mtext;
 
-    sigset(SIGTSTP, on_sig); /* signal catch */
+    signal(SIGTSTP, on_sig); /* signal catch */
 
     /* process will work like a deamon in background */
     for ( i = 0; i < 20; i++ )

@@ -81,7 +81,7 @@ int main() {
                     exit(7);
         case  0 :   /* child process */
                     for ( i = 1; i < 20; i++ )
-                        sigset(i, on_term); /* catch main signals */
+                        signal(i, on_term); /* catch main signals */
 
                     p_sbuf.sem_num = 0; /* values for semaphore operations */
                     v_sbuf.sem_num = 1;

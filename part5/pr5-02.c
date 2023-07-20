@@ -17,7 +17,7 @@ int main() {
     int n;
     char buf[10];
 
-    sigset(SIGINT, on_intr); /* signal catch */
+    signal(SIGINT, on_intr); /* signal catch */
 
     if ( tcgetattr(0, &old_tty) == -1 ) { /* read terminal attributes */
         perror("Error: Tcgetattr failed ");
