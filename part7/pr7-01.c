@@ -135,7 +135,6 @@ void p_error(char error[], int errnum, int how) {
     FILE *fp;
 
     if ( (fp = fopen("err.log", "a")) == 0 ) {
-        fclose(fp);
         exit(1);
     }
 
